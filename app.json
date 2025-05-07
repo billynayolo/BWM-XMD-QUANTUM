@@ -1,7 +1,7 @@
 
 {
-  "name": "BWM-XMD-QUANTUM",
-  "description": "Best WhatsApp bot developed by Ibrahim Adams",
+  "name": "BZ BK",
+  "description": "Best WhatsApp bot developed by BZ BK",
   "keywords": ["bot", "node", "baileys", "whatsapp"],
   "logo": "https://files.catbox.moe/2kcb4s.jpeg",
   "repository": "https://github.com/ekitale/maths-project",
@@ -50,7 +50,7 @@
     },
     "BOT_NAME": {
       "description": "Name for your bot",
-      "value": "BWM-XMD",
+      "value": "BZ BK",
       "required": false
     },
     "BOT_IMAGE": {
@@ -80,7 +80,7 @@
     },
    "STATUS_REACT_EMOJIS": {
       "description": "Enter your auto like status emojis",
-      "value": "💚,🚀,🌎,✅",
+      "value": "💚,🤖,💭,✅",
       "required": false 
     },
     "AUTO_REACT": {
@@ -95,7 +95,7 @@
     },
     "OWNER_NAME": {
       "description": "Owner name",
-      "value": "Ibrahim Adams",
+      "value": "BZ BK,
       "required": false
     },
     "SESSION_ID": {
