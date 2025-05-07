@@ -18,7 +18,7 @@ const ev = {
 };
 
 // Command registration function
-function adams(obj, fonctions) {
+function BZ(obj, fonctions) {
     let infoComs = obj;
     if (!obj.categorie) infoComs.categorie = "General";
     if (!obj.reaction) infoComs.reaction = "🚀"; // Default reaction
