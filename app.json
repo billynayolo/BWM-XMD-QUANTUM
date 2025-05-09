@@ -1,163 +1,98 @@
-
 {
-  "name": "BZ BK",
-  "description": "Best WhatsApp bot developed by BZ BK",
-  "keywords": ["bot", "node", "baileys", "whatsapp"],
-  "logo": "https://files.catbox.moe/2kcb4s.jpeg",
-  "repository": "https://github.com/ekitale/maths-project",
-  "success_url": "/",
-  "stack": "heroku-24",
-  "env": {
-    "PREFIX": {
-      "description": "Choose your prefix for your bot",
-      "value": ".",
-      "required": true
+    "name": "GOKU",
+    "description": " Whatsapp bot.",
+    "keywords": [
+        "whatsapp",
+        "bot"
+    ],
+    "stack": "container",
+    "env": {
+        "ASENA_SESSION": {
+            "description": "Enter whatsapp web session.",
+            "required": true
+        },
+        "SUDO": {
+            "description": "Sudo mode, Your number must be an international number. So you should have your number after the country code. Example: 919876543210 (IN)",
+            "required": false
+        },
+        "HANDLERS": {
+            "description": "enter prefix. Example . or ^[.,!/] for using multiple prefix like .,!/ or LyFE. Using keyword like LyFE will broke list and help command",
+            "required": true,
+            "value": "#"
+        },
+        "SEND_READ": {
+            "description": "send read receipt.",
+            "required": false,
+            "value": "true"
+        },
+        "HEROKU": {
+            "description": "Enable heroku features",
+            "required": true,
+            "value": "true"
+        },
+        "HEROKU_API_KEY": {
+            "description": "Enter Heroku API Key.",
+            "required": true
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Enter Heroku APP Name.",
+            "required": true
+        },
+        "DEBUG": {
+            "description": "debug",
+            "required": false,
+            "value": "false"
+        },
+        "CLR_SESSION": {
+            "description": "Enter true to delete old session.",
+            "required": false,
+            "value": "false"
+        },
+        "NO_ONLINE": {
+            "description": "set true to hide online.",
+            "required": false,
+            "value": "true"
+        },
+        "WARN_COUNT": {
+            "description": "Maximum no of warns",
+            "required": false,
+            "value": "3"
+        },
+        "WARN_MSG": {
+            "description": "Message send while kicking.",
+            "required": false,
+            "value": "OK bie"
+        },
+        "REMOVEBG_KEY": {
+            "description": "key from remove.bg",
+            "required": false,
+            "value": "null"
+        },
+        "LANGUAGE": {
+            "description": "Enter bot language, example EN for English, ID for Bahasa Indonesia, TR for Turkish",
+            "value": "EN"
+        },
+        "STICKER_PACKNAME": {
+            "description": "Sticker pack name,author",
+            "value": "🥰,lyfe00011"
+        },
+        "DISABLE_BOT": {
+            "description": "Disable or Block bot in group/chat.Enter required chat jid separated by ,",
+            "value": "null"
+        },
+        "FIND_API_KEY": {
+            "description": "key from https://dashboard.audd.io/",
+            "value": "null"
+        }
     },
-    "AUTO_REJECT_CALL": {
-      "description": "Enter yes for your bot to auto reject calls",
-      "value": "no",
-      "required": false
-    },
-    "AUTO_BIO": {
-      "description": "Enter yes for your bot to auto update bio",
-      "value": "yes",
-      "required": false
-    },
-    "AUTO_REPLY_STATUS": {
-      "description": "Enter yes for your bot to notify people that you have viewed there status",
-      "value": "no",
-      "required": false
-    },
-    "REPLY_STATUS_TEXT": {
-      "description": "Enter here your message for your bot to notify people that you have viewed there status",
-      "value": "ʏᴏᴜʀ sᴛᴀᴛᴜs ʜᴀᴠᴇ ʙᴇᴇɴ ᴠɪᴇᴡᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ✅",
-      "required": false
-    },
-    "AUTO_READ_STATUS": {
-      "description": "Your status will be read automatically (type yes to activate or no to deactivate)",
-      "value": "yes",
-      "required": false
-    },
-    "AUTO_DOWNLOAD_STATUS": {
-      "description": "Status will be sent to your inbox automatically (type yes to activate or no to deactivate)",
-      "value": "no",
-      "required": false
-    },
-    "AUTO_READ": {
-      "description": "Messages will be marked as read automatically (type yes to activate or no to deactivate)",
-      "value": "no",
-      "required": false
-    },
-    "BOT_NAME": {
-      "description": "Name for your bot",
-      "value": "BZ BK",
-      "required": false
-    },
-    "BOT_IMAGE": {
-      "description": "Image URL for your bot menu",
-      "value": "https://files.catbox.moe/h2ydge.jpg",
-      "required": false
-    },
-    "PUBLIC_MODE": {
-      "description": "Type yes for public mode or no for private mode",
-      "value": "yes",
-      "required": false
-    },
-    "HEROKU_API_KEY": {
-      "description": "Enter your Heroku API key to be able to control your vars",
-      "value": "",
-      "required": true 
-    },
-    "HEROKU_APP_NAME": {
-      "description": "Enter your Heroku app name to be able to control vars",
-      "value": "",
-      "required": true 
-    },
-    "OWNER_NUMBER": {
-      "description": "Enter your number eg, 2547xxxxxxx",
-      "value": "",
-      "required": true 
-    },
-   "STATUS_REACT_EMOJIS": {
-      "description": "Enter your auto like status emojis",
-      "value": "💚,🤖,💭,✅",
-      "required": false 
-    },
-    "AUTO_REACT": {
-      "description": "Enter your auto react messages",
-      "value": "no",
-      "required": false 
-    },
-   "AUTO_REACT_STATUS": {
-      "description": "Enter yes for your bot to auto like status",
-      "value": "yes",
-      "required": false 
-    },
-    "OWNER_NAME": {
-      "description": "Owner name",
-      "value": "BZ BK,
-      "required": false
-    },
-    "SESSION_ID": {
-      "description": "Your session ID",
-      "value": "",
-      "required": true
-    },    
-    "STARTING_BOT_MESSAGE": {
-      "description": "Enable starting message (yes/no)",
-      "value": "yes",
-      "required": true
-    },
-    "PRESENCE": {
-      "description": "Presence mode: 1=online, 2=typing, 3=recording",
-      "value": "",
-      "required": false
-    },
-    "ANTIDELETE_SENT_INBOX": {
-      "description": "Enable anti-delete to be sent inbox (yes/no)",
-      "value": "yes",
-      "required": false
-    },
-   "ANTIDELETE_RECOVER_CONVENTION": {
-      "description": "Enable anti-delete deleted to recover in conversation (yes/no)",
-      "value": "no",
-      "required": false
-    },	  
-    "GROUPANTILINK": {
-      "description": "Enable anti-link in groups (yes/no)",
-      "value": "yes",
-      "required": false
-    },
-    "CHATBOT": {
-      "description": "Enable text chatbot (yes/no)",
-      "value": "no",
-      "required": false
-    },
-    "WELCOME_MESSAGE": {
-      "description": "Enable welcoming message in groups (yes/no)",
-      "value": "no",
-      "required": false
-    },
-    "GOODBYE_MESSAGE": {
-      "description": "Enable  goodbye in groups (yes/no)",
-      "value": "no",
-      "required": false
-    },
-    "AUDIO_CHATBOT": {
-      "description": "Enable audio chatbot (yes/no)",
-      "value": "no",
-      "required": false
-    }
-  },
-  "formation": {
-    "web": {
-      "quantity": 1,
-      "size": "basic"
-    }
-  },
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    }
-  ]
+    "addons": [
+        {
+            "plan": "heroku-postgresql"
+        }
+    ],
+    "buildpacks": [
+        {
+            "url": "heroku-community/apt"
+        }
+    ]
 }
